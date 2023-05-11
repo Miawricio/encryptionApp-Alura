@@ -1,0 +1,201 @@
+@media only screen and (max-width: 414px) {
+
+    body {
+        background-color: #EEEEEE;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .header img {
+        margin-top: 40px;
+    }
+
+    .header {
+        margin-left: 40px;
+        margin-bottom: 80px;
+        display: block;
+    }
+
+
+    h6 {
+        margin-bottom: 5px;
+        color: #FF8E9E;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    /* MAIN SECTION POSITION */
+
+    .encryptionSection,
+    .outputSection {
+        width: 343px;
+        margin: 64px auto;
+    }
+
+    /* USER TEXT POSITION AND STYLES*/
+    #userText {
+        display: flex;
+        width: 343px;
+        min-height: 5em;
+        overflow: auto;
+        border: none;
+
+        background: none;
+
+
+        font-size: 32px;
+        font-family: 'Inter', sans-serif;
+        color: #F9B5D0;
+        resize: none;
+    }
+
+    #userText:focus {
+        outline: 0;
+    }
+
+    #userText::placeholder {
+        color: #F9B5D0;
+    }
+
+    /* BTN POSITIONING */
+
+    .btnEncrypt,
+    .btnDecrypt {
+
+        display: flex;
+        flex-direction: row;
+        padding: 24px;
+        margin: 8px auto 20px auto;
+
+        width: 343px;
+        height: 67px;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+        /* ROUND BORDERS */
+
+        border-radius: 24px;
+
+        /* TEXT INSIDE BTN */
+
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* BTN STYLES */
+
+    .btnEncrypt {
+        background-color: #FF597B;
+        border-color: #FF597B;
+        color: #FFFFFF;
+    }
+
+    .btnDecrypt {
+        border-color: #FF597B;
+        background-color: #EEEEEE;
+        color: #FF597B;
+    }
+
+    /* OUT PUT SECTION */
+
+    .noMsg {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+
+
+        background-color: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    .noMsg h3,
+    .noMsg h2 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .noMsg h2 {
+        font-size: 24px;
+        color: #343A40;
+        margin-bottom: 16px;
+    }
+
+    .noMsg h3 {
+        font-weight: 400;
+        font-size: 16px;
+        color: #495057;
+    }
+
+    /* ENCRYPTED */
+
+    .encrypted {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+
+        background-color: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    #encryptOutput {
+        display: flex;
+        width: 279px;
+        min-height: 5em;
+        overflow: auto;
+        border: none;
+
+        background: none;
+
+
+        font-size: 32px;
+        font-family: 'Inter', sans-serif;
+        color: #F9B5D0;
+        resize: none;
+    }
+
+    #encryptOutput:focus {
+        outline: 0;
+    }
+
+    .btnCopy {
+        display: flex;
+        flex-direction: row;
+        padding: 24px;
+        margin: 8px auto 20px auto;
+
+        width: 279px;
+        height: 67px;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+        /* ROUND BORDERS */
+
+        border-radius: 24px;
+
+        /* TEXT INSIDE BTN */
+
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        border-color: #FF597B;
+        background-color: #FFFFFF;
+        color: #FF597B;
+    }
+}
