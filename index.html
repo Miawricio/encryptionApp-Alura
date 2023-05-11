@@ -8,31 +8,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
     <title>Challenge - Encriptador</title>
 </head>
 
 
 <body>
     <header>
-        <h1>Miawed</h1>
+        <div class="header">
+            <img src="./imgs/Group 3.svg" alt="cat icon">
+        </div>
     </header>
 
     <main>
-        <section>
-            <textarea name="userText" id="userText" cols="30" rows="10"></textarea>
+        <section class="encryptionSection">
+            <textarea name="userText" id="userText" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
+            <h6>ⓘ Solo letras minúsculas sin acentos</h6>
             <div class="btns">
                 <button class="btnEncrypt">Encriptar</button>
                 <button class="btnDecrypt">Desencriptar</button>
             </div>
         </section>
 
-        <section>
-            <textarea class="encryptOutput" name="encryptOutput" id="encryptOutput" cols="30" rows="10">
+        <section class="outputSection">
+
+            <div class="noMsg">
+                <h2>Ningún mensaje fue encontrado.</h2>
+                <h3>Ingresa el texto que desees encriptar o desencriptar</h3>
+            </div>
+            <div class="encrypted">
+                <textarea class="encryptOutput" name="encryptOutput" id="encryptOutput" cols="30" rows="10">
 
             </textarea>
-            <div>
-                <button class="btnCopy">Copiar</button>
+                <div>
+                    <button class="btnCopy">Copiar</button>
+                </div>
             </div>
         </section>
     </main>
