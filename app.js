@@ -1,10 +1,17 @@
+/* INPUT */
 const userInput = document.querySelector("#userText");
-const encryptOutput = document.querySelector("#encryptOutput")
-const encryptBtn = document.querySelector(".btnEncrypt");
-
-const encryptedResult = document.querySelector(".encrypted")
 const initialMsg = document.querySelector(".noMsg");
+
+/* OUTPUT */
+const encryptOutput = document.querySelector("#encryptOutput")
+const encryptedResult = document.querySelector(".encrypted")
+
+/* BUTTONS */
+const encryptBtn = document.querySelector(".btnEncrypt");
 encryptBtn.addEventListener("click", encryption);
+
+const clipboardBtn = document.querySelector(".btnCopy")
+clipboardBtn.addEventListener("click", clipboard)
 /*
 La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -25,8 +32,6 @@ function encryption() {
 
     /* LOGIC FOR ENCRYPTION */
 
-
-
     let encrypted = forEncryption
         .replace(/e/gi, "enter")
         .replace(/i/gi, "imes")
@@ -44,10 +49,17 @@ function encryption() {
 
     }
 
-
-
-
-
 }
 
+/* CLIPBOARD TEXT */
+
+function clipboard() {
+    encryptOutput.select();
+    encryptOutput.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(encryptOutput.value);
+
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copiado";
+}
 
