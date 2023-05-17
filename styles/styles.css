@@ -1,4 +1,8 @@
 @media only screen and (min-width: 821px) {
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
 
     html,
     body {
@@ -241,6 +245,11 @@
 
 @media only screen and (min-width:415px) and (max-width: 820px) {
 
+    .tooltip {
+        position: relative;
+    }
+
+
     body {
         background-color: #EEEEEE;
         font-family: 'Inter', sans-serif;
@@ -418,6 +427,7 @@
         flex-direction: row;
         padding: 24px;
         margin: 8px auto 20px auto;
+        justify-content: center;
 
         width: 279px;
         height: 67px;
