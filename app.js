@@ -3,15 +3,18 @@ const userInput = document.querySelector("#userText");
 const initialMsg = document.querySelector(".noMsg");
 
 /* OUTPUT */
-const encryptOutput = document.querySelector("#encryptOutput")
-const encryptedResult = document.querySelector(".encrypted")
+const encryptOutput = document.querySelector("#encryptOutput");
+const encryptedResult = document.querySelector(".encrypted");
 
 /* BUTTONS */
 const encryptBtn = document.querySelector(".btnEncrypt");
 encryptBtn.addEventListener("click", encryption);
 
-const clipboardBtn = document.querySelector(".btnCopy")
-clipboardBtn.addEventListener("click", clipboard)
+const decryptBtn = document.querySelector(".btnDecrypt");
+decryptBtn.addEventListener("click", decryption)
+
+const clipboardBtn = document.querySelector(".btnCopy");
+clipboardBtn.addEventListener("click", clipboard);
 /*
 La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -45,12 +48,34 @@ function encryption() {
         encryptedResult.style.display = "block";
         initialMsg.style.display = "none"
         userInput.value = "¡Encriptación realizada con éxito!"
-        encryptOutput.textContent = encrypted;
+        encryptOutput.value = encrypted;
 
     }
 
 }
 
+/* DECRYPTION FUNCTION */
+function decryption() {
+
+    let forDecryption = encryptOutput.value;
+
+    /* LOGIC FOR ENCRYPTION */
+
+    let decrypted = forDecryption
+        .replace(/enter/gi, "e")
+        .replace(/imes/gi, "i")
+        .replace(/ai/gi, "a")
+        .replace(/ober/gi, "o")
+        .replace(/ufat/gi, "u");
+
+    /* HIDE INITIAL MSG AND SWAP WITH RESULT */
+
+    if (forDecryption.length != 0) {
+        encryptOutput.value = "¡Decriptación realizada con éxito!"
+        userInput.value = decrypted;
+
+    }
+}
 /* CLIPBOARD TEXT */
 
 function clipboard() {
